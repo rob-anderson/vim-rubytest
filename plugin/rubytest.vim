@@ -70,7 +70,8 @@ function s:ExecTest(cmd)
 
     let &efm = s:oldefm
   else
-    exe "!echo '" . cmd . "' && " . cmd
+    " exe "!echo '" . cmd . "' && " . cmd
+    VimuxRunCommand(cmd)
   endif
 endfunction
 
